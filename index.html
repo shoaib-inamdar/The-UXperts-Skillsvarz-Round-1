@@ -10,7 +10,7 @@
   <!-- <link rel="stylesheet" href="src/tailwind.css"> -->
 </head>
 <body>
-  <div class="main w-full bg-black overflow-x-hidden">
+  <div class="main w-full bg-black overflow-x-hidden relative">
     <div class="loader"></div>
     <div class="hero w-full h-screen relative flex justify-center items-center">
       <div class="herocanvas">
@@ -23,13 +23,10 @@
         </canvas>
       </div>
     </div>
-    <div class="intro w-full h-screen">
-      <canvas id="frame" class="w-full h-screen"></canvas>
-    </div>
-    <div class="features w-full h-screen">
+    <div class="features w-full h-screen ">
       <!-- swayam -->
     </div>
-    <div class="products w-full h-screen text-white overflow-hidden">
+    <div class="products w-full h-screen text-white overflow-hidden relative">
       <div class="products-wrapper w-full h-full relative flex justify-center items-center">
         <h1 class="text-[10rem]">Products</h1>
       </div>
@@ -52,8 +49,11 @@
         <img src="public/assets/phone2.png" alt="">
       </div>
     </div>
+    <div class="intro w-full h-screen">
+      <canvas id="frame" class="w-full h-screen"></canvas>
+    </div>
     <div class="page w-full h-screen"></div>
-
+    
   </div>
 
 
