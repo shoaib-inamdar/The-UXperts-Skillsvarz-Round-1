@@ -12,7 +12,9 @@
 
 <body>
   <div class="main w-full bg-black  relative overflow-x-hidden">
-    <div class="loader"></div>
+    <div class="loader w-full h-screen fixed top-0 left-0 z-[5]">
+      <video loop muted autoplay class="w-full h-full object-cover" src="/public/videos/Loader.mp4"></video>
+    </div>
     <div
       class="cursor lg:flex hidden w-4 h-4 pointer-events-none fixed z-[6] rounded-full bg-white -translate-x-1/2 -translate-y-1/2 opacity-0 mix-blend-difference ">
     </div>

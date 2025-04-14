@@ -38,7 +38,14 @@ function lenis(){
   
 // lenis()
 // const scroll = new FeatherScroll();
-
+function loader(){
+  gsap.to(".loader",{
+    opacity:0,
+    display:"none",
+    delay:4
+  })
+}
+loader()
 function cursor(){
   window.addEventListener("mousemove",function(e){
 
