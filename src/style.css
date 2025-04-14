@@ -11,10 +11,13 @@
   src: url(/public/fonts/Ndot-55.otf);
 }
 
-.herotext{
-  font-family: orbitron;
+.herotext h1{
+  /* font-family: ndot; */
 }
-.products-wrapper h1{
+.abouthead h1{
+  font-family: ndot;
+}
+.products-wrapper h1,h1{
   font-family: orbitron;
 }
 img{
@@ -22,8 +25,47 @@ img{
   height: 100%;
   object-fit: cover;
 }
-.product-imgs{
-  box-shadow: 0px 0px 61px 2px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 0px 61px 2px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 61px 2px rgba(0,0,0,0.75);
+.overlay{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0,0, .4);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  /* font-family: ndot; */
+  /* transition: .8 all ease-in-out; */
 }
+.slideelem {
+  /* background: rgba(225, 225, 224, .1); */
+}
+.overlay h1{
+  /* font-family: ndot; */
+}
+/* .products-imgs h1{
+  font-family: ndot;
+} */
+/* .overlay:hover{
+  opacity: 1;
+  transition: .8 all ease-in-out;
+} */
+/* .product-imgs:hover .product-imgs>img{
+  transform: scale(1.4);
+} */
+ /* .cardimg>h1:hover .cardimg{
+  height: 20rem;
+ } */
+
+.cardimg{
+  filter: grayscale(1);
+}
+
+  @keyframes animate {
+    0%,
+    100% {
+      transform: translate(0 ,10px);
+    }
+    50% {
+      transform: translate(0 ,-10px);
+    }
+  }

@@ -5,60 +5,227 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Nothing</title>
   <link rel="stylesheet" href="src/style.css">
   <!-- <link rel="stylesheet" href="src/tailwind.css"> -->
 </head>
+
 <body>
-  <div class="main w-full bg-black overflow-x-hidden relative">
+  <div class="main w-full bg-black  relative overflow-x-hidden">
     <div class="loader"></div>
+    <div
+      class="cursor lg:flex hidden w-4 h-4 pointer-events-none fixed z-[6] rounded-full bg-white -translate-x-1/2 -translate-y-1/2 opacity-0 mix-blend-difference ">
+    </div>
+
     <div class="hero w-full h-screen relative flex justify-center items-center">
       <div class="herocanvas">
-        <div class="overlay  w-[60vw] h-[20vh] text-white text-[10rem] tracking-wider absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold"></div>
-        <div class="herotext text-white text-[10rem] tracking-wider absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold z-[2]">
+        <div
+          class="overlay  w-[60vw] h-[20vh] text-white text-[10rem] tracking-wider absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold">
+        </div>
+        <div
+          class="herotext text-white text-[10rem] tracking-wider absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold z-[2]">
           <h1 class="text-[10rem]">NOTHING</h1>
         </div>
         <canvas id="herocanvas" class="w-full h-screen absolute top-0 left-0">
-          
         </canvas>
       </div>
     </div>
-    <div class="features w-full h-screen ">
-      <!-- swayam -->
+
+    <!-- <div class="video w-full h-screen ">
+       <video muted autoplay loop class="w-full h-full object-cover" src="https://cdn.shopify.com/videos/c/o/v/ca2e084ab9a540cd9f749408e01bdf47.mp4"></video>
+    </div> -->
+    <div class="about w-full h-screen">
+      <div class="aboutcontent relative w-full h-full flex flex-col justify-center items-center">
+        <div data-scroll data-scroll-speed="-.1" class="aboutimg absolute top-0 left-0 w-[20rem] h-[20rem]"
+          id="leftimg"><img src="" alt=""></div>
+        <div class="aboutimg absolute bottom-0 right-0 w-[20rem] h-[20rem]" id="rightimg"><img src="" alt=""></div>
+        <div class="abouthead text-white">
+          <h1 class="text-[5rem] tracking-wider">NOTHING (R)</h1>
+        </div>
+        <h1 class="para-effect w-[80vw] p-10 text-center font-light text-white text-[2rem] opacity-[.6]">The Nothing
+          Phone redefines what a smartphone can be. Its signature transparent rear and iconic glyph interface not only
+          set it apart from the crowd but also embody the spirit of simplicity and elegance.</h1>
+      </div>
     </div>
     <div class="products w-full h-screen text-white overflow-hidden relative">
       <div class="products-wrapper w-full h-full relative flex justify-center items-center">
-        <h1 class="text-[10rem]">Products</h1>
+        <h1 class="text-[10rem] font-semibold">Products</h1>
       </div>
-      <div class="product-imgs absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right" id="right1">
+      <div
+        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right"
+        id="right1">
+        <div class="overlay w-full h-full" id="overlay1">
+          <h1 class="product1 text-[5rem] ">Ear Open</h1>
+        </div>
         <img src="https://in.nothing.tech/cdn/shop/files/Intuitive-storage---Desktop_1494x.jpg?v=1726921914" alt="">
       </div>
-      <div class="product-imgs absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left" id="left1">
+      <div
+        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left"
+        id="left1">
+        <div class="overlay w-full h-full" id="overlay2">
+          <h1 class="product2 text-[5rem] ">Ear (a)</h1>
+        </div>
         <img src="/public/assets/Group 6.png" alt="">
       </div>
-      <div class="product-imgs absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right" id="right2">
+      <div
+        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right"
+        id="right2">
+        <div class="overlay w-full h-full" id="overlay3">
+          <h1 class="product3 text-[5rem] ">Ear</h1>
+        </div>
         <img src="/public/assets/Group 7 (2).png" alt="">
       </div>
-      <div class="product-imgs absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left" id="left2">
+      <div
+        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left"
+        id="left2">
+        <div class="overlay w-full h-full" id="overlay4">
+          <h1 class="product4 text-[5rem] ">Phone (2a) Plus</h1>
+        </div>
         <img src="public/assets/phone2a+.png" alt="">
       </div>
-      <div class="product-imgs absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right" id="right3">
+      <div
+        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right"
+        id="right3">
+        <div class="overlay w-full h-full" id="overlay5">
+          <h1 class="product5 text-[5rem] ">Phone (2a)</h1>
+        </div>
         <img src="public/assets/phone2a.png" alt="">
       </div>
-      <div class="product-imgs absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left" id="left3">
+      <div
+        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left"
+        id="left3">
+        <div class="overlay w-full h-full" id="overlay6">
+          <h1 class="product6 text-[5rem] ">Phone (2)</h1>
+        </div>
         <img src="public/assets/phone2.png" alt="">
       </div>
     </div>
-    <div class="intro w-full h-screen">
+    <div class="features w-full h-screen">
       <canvas id="frame" class="w-full h-screen"></canvas>
     </div>
-    <div class="page w-full h-screen"></div>
-    
+    <div class="ewaste w-full">
+      <div class="ewaste-wrapper w-full flex flex-col relative text-white gap-10">
+        <div class="slide1 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
+          <h1 class="text-center text-5xl font-semibold"><span class="text-green-500">Sustainable</span> Design</h1>
+          <div class="slideelem lg:absolute top-[15vw] left-[7vw] p-10    flex flex-col gap-5 justify-center ">
+            <h1 class="">Over 50% sustainable plastic parts</h1>
+            <h1 class="">100% recycled aluminium for mid-frame and buttons</h1>
+          </div>
+          <div class="slideelem lg:absolute bottom-[10vw] right-[7vw] p-10   flex flex-col gap-5 justify-center ">
+            <h1 class="">Over 85% recycled steel in 21 stamping parts</h1>
+            <h1 class="">6 circuit boards crafted with 100% recycled tin</h1>
+          </div>
+          <div data-scroll data-scroll-speed=".2"
+            class="slideimg absolute top-[7vw] right-[10vw] w-[17rem] h-[17rem] overflow-hidden ">
+            <img src="/public/assets/recycle1.webp" alt="">
+          </div>
+          <div data-scroll data-scroll-speed=".2"
+            class="slidevideo absolute bottom-[3vw] left-[10vw] w-[17rem] h-[17rem] overflow-hidden ">
+            <video autoplay loop muted src="/public/videos/phone.mp4"></video>
+          </div>
+
+        </div>
+        <div class="slide2 w-full h-screen pt-20 flex flex-col gap-5 relative items-center">
+          <h1 class="text-center text-5xl font-semibold"><span class="text-green-500">Environmental</span> Impact</h1>
+          <div
+            class="slideelem  lg:absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5  flex flex-col justify-center gap-5">
+            <h1 class="text-4xl tracking-wider">Carbon Footprint:</h1>
+            <h1 class="text-6xl text-center font-semibold text-green-500">51.3 KG</h1>
+            <h1 class="text-4xl tracking-wider">Our Lowest-ever !</h1>
+          </div>
+          <div data-scroll data-scroll-speed=".2" class="slideimg lg:absolute top-[20vh] left-[5rem] w-[13rem] h-2/3">
+            <img src="/public/assets/Vertical Hydroponic Garden.jpeg" alt="">
+          </div>
+          <div data-scroll data-scroll-speed=".2" class="slideimg lg:absolute top-0 right-[5rem] w-[17rem] h-[17rem]">
+            <img src="/public/assets/Vertical Hydroponic Garden.jpeg" alt="">
+          </div>
+          <div data-scroll data-scroll-speed=".2"
+            class="slideimg lg:absolute bottom-0 right-[5rem] w-[17rem] h-[17rem]">
+            <video autoplay loop muted class="w-full h-full object-cover" src="/public/videos/carbon.mp4"></video>
+          </div>
+        </div>
+        <div class="slide3 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
+          <h1 class="text-center text-5xl font-semibold"><span class="text-green-500">Green</span> Packaging</h1>
+          <div
+            class="slideelem absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4">
+            <h1 class="text-4xl tracking-wider">Plastic-free packaging,</h1>
+            <h1 class="text-4xl tracking-wider">made with </h1>
+            <h1 class="text-green-500 text-6xl">60%</h1>
+            <h1 class="text-4xl tracking-wider">recycled fibre</h1>
+          </div>
+          <div data-scroll data-scroll-speed=".2"
+            class="slideimg lg:absolute top-[5rem] left-[3rem] w-[20rem] h-[20rem]">
+            <img src="/public/assets/Reduce Your Carbon Footprint_ Eco-Friendly Technology.jpg" alt="">
+          </div>
+          <div data-scroll data-scroll-speed=".2"
+            class="slideimg lg:absolute bottom-[5rem] right-[3rem] w-[20rem] h-[20rem]">
+            <video autoplay loop muted class="w-full h-full object-cover" src="/public/videos/packaging.mp4"></video>
+          </div>
+        </div>
+        <div class="slide w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
+        </div>
+      </div>
+    </div>
+    <div class="footer w-full h-screen text-white">
+      <footer class="p-[1rem] w-full">
+        <div class="main-footer w-full">
+          <div class="first w-full flex items-center gap-[.5vw]">
+            <h1 id="logo">Nothing</h1>
+            <div class="line h-[20vh] w-full">
+              <svg width="100%" height="100%" viewBox="0 0 100 100">
+                <path d="M -400,50 Q 0,50 500,50" fill="none" stroke="#fff" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="upper-footer w-full flex gap-[9rem] mb-[5rem]">
+            <div class="left-up">
+              <h2>About Us</h2>
+              <ul>
+                <li><a href="#">Career</a></li>
+                <li><a href="#"></a>Community</a></li>
+                <li><a href="#"></a>Sustainability</a></li>
+                <li><a href="#"></a>Business enquiry</a></li>
+                <li><a href="#"></a>Press contact</a></li>
+              </ul>
+            </div>
+            <div class="right-up">
+              <ul>
+                <h2>Support</h2>
+                <li><a href="#">Support centre</a></li>
+                <li><a href="#"></a>Contact us</a></li>
+                <li><a href="#">Contact us via WhatsApp</a></li>
+                <li><a href="#">Service centre</a></li>
+                <li><a href="#">E-waste management</a></li>
+                <li><a href="#">Find a store</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mid-footer w-full flex justify-between items-center gap-[2rem] text-2xl ">
+            <div class="first-child">
+              <a class="py-2" href="#">X</a><a class="py-2" href="#">Youtube</a><a class="py-2" href="#">Facebook</a><a class="py-2" href="#">Instagram</a>
+            </div>
+            <div class="second-child">
+              <h5>About Us</h5>
+            </div>
+          </div>
+          <div class="lower-footer w-full ">
+            <div class="line">
+              <svg width="100%" height="100%" viewBox="0 0 100 100">
+                <path d="M -400,50 Q 0,50 500,50" fill="none" stroke="#fff" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="end text-7xl tracking-widest opacity-50 p-2">
+            <h1>Nothing</h1>
+          </div>
+        </div>
+      </footer>
+    </div>
   </div>
-
-
+  <!-- <script src="https://cdn.jsdelivr.net/npm/scrollfeather/featherScroll.js"></script> -->
   <script type="module" src="/src/script.js"></script>
   <script type="module" src="/src/three.js"></script>
+
 </body>
 
 </html>
