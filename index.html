@@ -15,18 +15,49 @@
     <div class="loader w-full h-screen fixed top-0 left-0 z-[5]">
       <video loop muted autoplay class="w-full h-full object-cover" src="/public/videos/Loader.mp4"></video>
     </div>
-    <div
-      class="cursor lg:flex hidden w-4 h-4 pointer-events-none fixed z-[6] rounded-full bg-white -translate-x-1/2 -translate-y-1/2 opacity-0 mix-blend-difference ">
+    <div class="cursor lg:flex hidden w-4 h-4 pointer-events-none fixed z-[6] rounded-full bg-white -translate-x-1/2 -translate-y-1/2 opacity-0 mix-blend-difference ">
     </div>
 
     <div class="hero w-full h-screen relative flex justify-center items-center">
       <div class="herocanvas">
-        <div
-          class="overlay  w-[60vw] h-[20vh] text-white text-[10rem] tracking-wider absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold">
+        <div class="sidenav absolute top-0 -right-[40%] w-1/3  h-full flex-col lg:flex hidden gap-10 text-black bg-white z-[999] pt-10 px-10 mix-blend-difference">
+          <div class="cross text-5xl text-white cursor-pointer cursoreffect">✖</div>
+          <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+            <h4 class="text-2xl">Home</h4>
+            <h4 class="text-2xl">Home</h4>
+          </div>
+          <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+            <h4 class="text-2xl">About</h4>
+            <h4 class="text-2xl">About</h4>
+          </div>
+          <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+            <h4 class="text-2xl">Support</h4>
+            <h4 class="text-2xl">Support</h4>
+          </div>
+          <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+            <h4 class="text-2xl">Community</h4>
+            <h4 class="text-2xl">Community</h4>
+          </div>
         </div>
-        <div
-          class="herotext text-white text-[10rem] tracking-wider absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold z-[2]">
-          <h1 class="text-[10rem]">NOTHING</h1>
+        <div class="nav w-full h-[10vh] absolute py-3 px-5 flex justify-between items-center text-white top-0 left-0 z-[2] ">
+          <div class="left">
+            <h1 class="text-4xl cursoreffect">NOTHING (R)</h1>
+          </div>
+          <div class="mid lg:flex hidden gap-5">
+            <h1 class="cursoreffect">Store</h1>
+            <h1 class="cursoreffect">Community</h1>
+            <h1 class="cursoreffect">Support</h1>
+          </div>
+          <div class="right cursoreffect">
+            <i class="ri-menu-3-line"></i>
+          </div>
+        </div>
+        <div class="herooverlay  w-full h-[20vh] text-white text-[10rem] tracking-wider absolute top-1/2 -translate-y-1/2 font-semibold">
+        
+        </div>
+        <div class="herotext text-white flex justify-between w-full text-[10rem] tracking-wide font-semibold absolute top-1/2 left-0 p-10 -translate-y-1/2  z-[2]">
+          <h1 class="cursoreffect lg:text-[5rem] text-[4rem] text-center">NOTHING (R)</h1>
+          <h1 class="cursoreffect text-[5rem] lg:flex hidden " id="phone">Phone 3a</h1>
         </div>
         <canvas id="herocanvas" class="w-full h-screen absolute top-0 left-0">
         </canvas>
@@ -38,140 +69,169 @@
     </div> -->
     <div class="about w-full h-screen">
       <div class="aboutcontent relative w-full h-full flex flex-col justify-center items-center">
-        <div data-scroll data-scroll-speed="-.1" class="aboutimg absolute top-0 left-0 w-[20rem] h-[20rem]"
-          id="leftimg"><img src="" alt=""></div>
-        <div class="aboutimg absolute bottom-0 right-0 w-[20rem] h-[20rem]" id="rightimg"><img src="" alt=""></div>
         <div class="abouthead text-white">
-          <h1 class="text-[5rem] tracking-wider">NOTHING (R)</h1>
+          <h1 class="lg:text-[5rem] text-[3rem] tracking-wider cursoreffect">NOTHING (R)</h1>
         </div>
-        <h1 class="para-effect w-[80vw] p-10 text-center font-light text-white text-[2rem] opacity-[.6]">The Nothing
+        <h1 class="para-effect lg:w-[80vw] w-full tracking-wider lg:p-10 p-5 text-center font-light text-white text-[2rem] opacity-[.6]">The Nothing
           Phone redefines what a smartphone can be. Its signature transparent rear and iconic glyph interface not only
           set it apart from the crowd but also embody the spirit of simplicity and elegance.</h1>
+          
       </div>
+    </div>
+    <div data-text="" class="videodiv w-full h-screen relative cursoreffect">
+      <video loop muted autoplay class="w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="/public/videos/video.mp4"></video>
     </div>
     <div class="products w-full h-screen text-white overflow-hidden relative">
       <div class="products-wrapper w-full h-full relative flex justify-center items-center">
-        <h1 class="text-[10rem] font-semibold">Products</h1>
+        <h1 class="lg:text-[10rem] text-[4rem] font-semibold">Products</h1>
       </div>
       <div
-        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right"
+        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-right"
         id="right1">
         <div class="overlay w-full h-full" id="overlay1">
-          <h1 class="product1 text-[5rem] ">Ear Open</h1>
+          <h1 class="product1 lg:text-[5rem] text-[3rem] ">Ear Open</h1>
         </div>
         <img src="https://in.nothing.tech/cdn/shop/files/Intuitive-storage---Desktop_1494x.jpg?v=1726921914" alt="">
       </div>
       <div
-        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left"
+        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-left"
         id="left1">
         <div class="overlay w-full h-full" id="overlay2">
-          <h1 class="product2 text-[5rem] ">Ear (a)</h1>
+          <h1 class="product2 lg:text-[5rem] text-[3rem] ">Ear (a)</h1>
         </div>
         <img src="/public/assets/Group 6.png" alt="">
       </div>
       <div
-        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right"
+        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-right"
         id="right2">
         <div class="overlay w-full h-full" id="overlay3">
-          <h1 class="product3 text-[5rem] ">Ear</h1>
+          <h1 class="product3 lg:text-[5rem] text-[3rem] ">Ear</h1>
         </div>
         <img src="/public/assets/Group 7 (2).png" alt="">
       </div>
       <div
-        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left"
+        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-left"
         id="left2">
         <div class="overlay w-full h-full" id="overlay4">
-          <h1 class="product4 text-[5rem] ">Phone (2a) Plus</h1>
+          <h1 class="product4 lg:text-[5rem] text-[3rem] ">Phone (2a) Plus</h1>
         </div>
         <img src="public/assets/phone2a+.png" alt="">
       </div>
       <div
-        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-right"
+        class="product-imgs cursoreffect absolute top-[110%] -right-[30%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-right"
         id="right3">
         <div class="overlay w-full h-full" id="overlay5">
-          <h1 class="product5 text-[5rem] ">Phone (2a)</h1>
+          <h1 class="product5 lg:text-[5rem] text-[3rem] ">Phone (2a)</h1>
         </div>
         <img src="public/assets/phone2a.png" alt="">
       </div>
       <div
-        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] h-[90vh] w-[70vw] opacity-100 overflow-hidden imgs-left"
+        class="product-imgs cursoreffect absolute top-[110%] -left-[20%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-left"
         id="left3">
         <div class="overlay w-full h-full" id="overlay6">
-          <h1 class="product6 text-[5rem] ">Phone (2)</h1>
+          <h1 class="product6 lg:text-[5rem] text-[3rem] ">Phone (2)</h1>
         </div>
         <img src="public/assets/phone2.png" alt="">
       </div>
     </div>
-    <div class="features w-full h-screen">
+    <div class="content w-full">
+      <div class="content1 p-10 flex gap-5 ">
+        <div data-scroll data-scroll-speed=".4" class="contentimg lg:flex hidden w-[20rem] h-[30rem] cursoreffect">
+          <img src="/public/assets/CMF.jpg" alt="">
+        </div>
+        <div data-scroll data-scroll-speed=".3" class="contentimg lg:flex hidden w-[25rem] h-[40rem] cursoreffect">
+          <img src="/public/assets/White-techno.jpg" alt="">
+        </div>
+        <div class="textdiv lg:w-[60vw] w-full flex flex-col gap-5 lg:px-5 p-2">
+          <h1 class="text-5xl text-white tracking-wider cursoreffect"><span class="text-red-600">Revolutionary</span> Design</h1>
+          <div class="line w-full h-[2px] bg-white"></div>
+          <h1 class="text-2xl text-white tracking-wider opacity-70">Embrace bold minimalism with a transparent rear and dynamic glyph interface that not only capture attention but redefine everyday interaction.</h1>
+        </div>
+      </div>
+      <div class="content2 p-10 flex gap-5">
+        <div class="textdiv lg:w-[60vw] w-full flex flex-col gap-5 lg:px-5 p-2 mt-[5rem]">
+          <h1 class="text-5xl text-white tracking-wider cursoreffect">Forward-Thinking <span class="text-blue-600">Innovation</span></h1>
+          <div class="line w-full h-[2px] bg-white"></div>
+          <h1 class="text-2xl text-white tracking-wider opacity-70">Foster a mindset that continually challenges industry standards and propels technological advancements for a future-ready device.</h1>
+        </div>
+        <div data-scroll data-scroll-speed=".5" class="contentimg lg:flex hidden w-[20rem] h-[20rem] mt-[5rem] cursoreffect">
+          <img src="/public/assets/Kith.jpg" alt="">
+        </div>
+        <div data-scroll data-scroll-speed=".3" class="contentimg lg:flex hidden w-[20rem] h-[30rem] cursoreffect">
+          <img src="/public/assets/Nothing-teases.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="features w-full h-screen relative text-white">
       <canvas id="frame" class="w-full h-screen"></canvas>
     </div>
     <div class="ewaste w-full">
-      <div class="ewaste-wrapper w-full flex flex-col relative text-white gap-10">
+      <div class="ewaste-wrapper w-full  flex flex-col relative text-white gap-10">
         <div class="slide1 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
-          <h1 class="text-center text-5xl font-semibold"><span class="text-green-500">Sustainable</span> Design</h1>
-          <div class="slideelem lg:absolute top-[15vw] left-[7vw] p-10    flex flex-col gap-5 justify-center ">
-            <h1 class="">Over 50% sustainable plastic parts</h1>
-            <h1 class="">100% recycled aluminium for mid-frame and buttons</h1>
+          <h1 class="slide1h1 text-center text-5xl font-semibold cursoreffect"><span class="text-green-500">Sustainable</span> Design</h1>
+          <div class="slideelem absolute lg:top-[15vw] lg:left-[7vw] top-[20vh] left-0 z-[2] p-10 mix-blend-difference   flex flex-col gap-5 justify-center ">
+            <h1 class="tracking-wider text-2xl ">Over 50% sustainable plastic parts</h1>
+            <h1 class="tracking-wider text-2xl ">100% recycled aluminium for mid-frame and buttons</h1>
           </div>
-          <div class="slideelem lg:absolute bottom-[10vw] right-[7vw] p-10   flex flex-col gap-5 justify-center ">
-            <h1 class="">Over 85% recycled steel in 21 stamping parts</h1>
-            <h1 class="">6 circuit boards crafted with 100% recycled tin</h1>
+          <div class="slideelem absolute lg:bottom-[10vw] lg:right-[7vw] top-[50vh] z-[2] p-10 mix-blend-difference flex flex-col gap-5 justify-center ">
+            <h1 class="tracking-wider text-2xl ">Over 85% recycled steel in 21 stamping parts</h1>
+            <h1 class="tracking-wider text-2xl ">6 circuit boards crafted with 100% recycled tin</h1>
           </div>
-          <div data-scroll data-scroll-speed=".2"
-            class="slideimg absolute top-[7vw] right-[10vw] w-[17rem] h-[17rem] overflow-hidden ">
+          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect absolute top-[7vw] right-[10vw] w-[17rem] h-[17rem] overflow-hidden ">
             <img src="/public/assets/recycle1.webp" alt="">
           </div>
+          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect absolute -bottom-[2vw] left-1/2 -translate-x-1/2 w-[13rem] h-[13rem] overflow-hidden lg:opacity-100 opacity-0">
+            <img src="/public/svg/recycled-bag.svg" alt="">
+          </div>
           <div data-scroll data-scroll-speed=".2"
-            class="slidevideo absolute bottom-[3vw] left-[10vw] w-[17rem] h-[17rem] overflow-hidden ">
+            class="slidevideo cursoreffect absolute lg:bottom-[3vw] lg:left-[10vw] bottom-0 left-0 lg:w-[17rem] lg:h-[17rem] w-full h-1/2 overflow-hidden  ">
             <video autoplay loop muted src="/public/videos/phone.mp4"></video>
           </div>
 
         </div>
         <div class="slide2 w-full h-screen pt-20 flex flex-col gap-5 relative items-center">
-          <h1 class="text-center text-5xl font-semibold"><span class="text-green-500">Environmental</span> Impact</h1>
+          <h1 class="cursoreffect text-center text-5xl font-semibold"><span class="text-green-500">Environmental</span> Impact</h1>
           <div
-            class="slideelem  lg:absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5  flex flex-col justify-center gap-5">
-            <h1 class="text-4xl tracking-wider">Carbon Footprint:</h1>
+            class="slideelem absolute z-[2] mix-blend-difference top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5  flex flex-col justify-center gap-5">
+            <h1 class="text-4xl tracking-wider text-center">Carbon Footprint:</h1>
             <h1 class="text-6xl text-center font-semibold text-green-500">51.3 KG</h1>
-            <h1 class="text-4xl tracking-wider">Our Lowest-ever !</h1>
+            <h1 class="text-4xl tracking-wider text-center">Our Lowest-ever !</h1>
           </div>
-          <div data-scroll data-scroll-speed=".2" class="slideimg lg:absolute top-[20vh] left-[5rem] w-[13rem] h-2/3">
+          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect lg:absolute top-[20vh] left-[5rem] w-[13rem] h-2/3 opacity-0 lg:opacity-100">
             <img src="/public/assets/Vertical Hydroponic Garden.jpeg" alt="">
           </div>
-          <div data-scroll data-scroll-speed=".2" class="slideimg lg:absolute top-0 right-[5rem] w-[17rem] h-[17rem]">
+          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect lg:absolute top-0 right-[5rem] w-[17rem] h-[17rem]">
             <img src="/public/assets/Vertical Hydroponic Garden.jpeg" alt="">
           </div>
           <div data-scroll data-scroll-speed=".2"
-            class="slideimg lg:absolute bottom-0 right-[5rem] w-[17rem] h-[17rem]">
+            class="slideimg cursoreffect lg:absolute bottom-0 right-[5rem] w-[17rem] h-[17rem]">
             <video autoplay loop muted class="w-full h-full object-cover" src="/public/videos/carbon.mp4"></video>
           </div>
         </div>
         <div class="slide3 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
-          <h1 class="text-center text-5xl font-semibold"><span class="text-green-500">Green</span> Packaging</h1>
+          <h1 class="cursoreffect text-center text-5xl font-semibold"><span class="text-green-500">Green</span> Packaging</h1>
           <div
-            class="slideelem absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4">
-            <h1 class="text-4xl tracking-wider">Plastic-free packaging,</h1>
-            <h1 class="text-4xl tracking-wider">made with </h1>
-            <h1 class="text-green-500 text-6xl">60%</h1>
-            <h1 class="text-4xl tracking-wider">recycled fibre</h1>
+            class="slideelem absolute z-[2] mix-blend-difference top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4">
+            <h1 class="text-4xl tracking-wider text-center">Plastic-free packaging,</h1>
+            <h1 class="text-4xl tracking-wider text-center">made with </h1>
+            <h1 class="text-green-500 text-6xl font-semibold text-center">60%</h1>
+            <h1 class="text-4xl tracking-wider text-center">recycled fibre</h1>
           </div>
           <div data-scroll data-scroll-speed=".2"
-            class="slideimg lg:absolute top-[5rem] left-[3rem] w-[20rem] h-[20rem]">
+            class="slideimg cursoreffect lg:absolute top-[5rem] left-[3rem] w-[20rem] h-[20rem] lg:opacity-100 opacity-0">
             <img src="/public/assets/Reduce Your Carbon Footprint_ Eco-Friendly Technology.jpg" alt="">
           </div>
           <div data-scroll data-scroll-speed=".2"
-            class="slideimg lg:absolute bottom-[5rem] right-[3rem] w-[20rem] h-[20rem]">
+            class="slideimg cursoreffect lg:absolute bottom-[5rem] right-[3rem] w-[20rem] h-[20rem]">
             <video autoplay loop muted class="w-full h-full object-cover" src="/public/videos/packaging.mp4"></video>
           </div>
         </div>
-        <div class="slide w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
-        </div>
       </div>
     </div>
-    <div class="footer w-full h-screen text-white">
+    <div class="footer w-full text-white p-10 overflow-hidden">
       <footer class="p-[1rem] w-full">
         <div class="main-footer w-full">
-          <div class="first w-full flex items-center gap-[.5vw]">
+          <div class="first w-full flex items-center lg:gap-[.5vw]">
             <h1 id="logo">Nothing</h1>
             <div class="line h-[20vh] w-full">
               <svg width="100%" height="100%" viewBox="0 0 100 100">
@@ -179,52 +239,114 @@
               </svg>
             </div>
           </div>
-          <div class="upper-footer w-full flex gap-[9rem] mb-[5rem]">
+          <div class="mobilefoot w-[20rem] h-[10reml hidden flex-col gap-5 items-center justify-center">
+            <h1 class="tracking-wider text-2xl">Instagram</h1>
+            <h1 class="tracking-wider text-2xl">Facebook</h1>
+            <h1 class="tracking-wider text-2xl">Youtube</h1>
+            <h1 class="tracking-wider text-2xl">Twitter</h1>
+          </div>
+          <div class="upper-footer w-full lg:flex hidden gap-[9rem] mb-[5rem]">
             <div class="left-up">
-              <h2>About Us</h2>
-              <ul>
-                <li><a href="#">Career</a></li>
-                <li><a href="#"></a>Community</a></li>
-                <li><a href="#"></a>Sustainability</a></li>
-                <li><a href="#"></a>Business enquiry</a></li>
-                <li><a href="#"></a>Press contact</a></li>
-              </ul>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">About Us</h4>
+                <h4 class="text-2xl">About Us</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Career</h4>
+                <h4 class="text-2xl">Career</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Community</h4>
+                <h4 class="text-2xl">Community</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Sustainability</h4>
+                <h4 class="text-2xl">Sustainability</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Business enquiry</h4>
+                <h4 class="text-2xl">Business enquiry</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Press contact</h4>
+                <h4 class="text-2xl">Press contact</h4>
+              </div>
             </div>
             <div class="right-up">
-              <ul>
-                <h2>Support</h2>
-                <li><a href="#">Support centre</a></li>
-                <li><a href="#"></a>Contact us</a></li>
-                <li><a href="#">Contact us via WhatsApp</a></li>
-                <li><a href="#">Service centre</a></li>
-                <li><a href="#">E-waste management</a></li>
-                <li><a href="#">Find a store</a></li>
-              </ul>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Support</h4>
+                <h4 class="text-2xl">Support</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Support centre</h4>
+                <h4 class="text-2xl">Support centre</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Contact us</h4>
+                <h4 class="text-2xl">Contact us</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Contact us via WhatsApp</h4>
+                <h4 class="text-2xl">Contact us via WhatsApp</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Service centre</h4>
+                <h4 class="text-2xl">Service centre</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">E-waste management</h4>
+                <h4 class="text-2xl">E-waste management</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Find a store</h4>
+                <h4 class="text-2xl">Find a store</h4>
+              </div>
             </div>
           </div>
-          <div class="mid-footer w-full flex justify-between items-center gap-[2rem] text-2xl ">
-            <div class="first-child">
-              <a class="py-2" href="#">X</a><a class="py-2" href="#">Youtube</a><a class="py-2" href="#">Facebook</a><a class="py-2" href="#">Instagram</a>
+          <div class="mid-footer w-full lg:flex hidden justify-between items-center gap-[2rem] text-2xl">
+            <div class="first-child w-full flex gap-5">
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class=" text-2xl">X</h4>
+                <h4 class=" text-2xl">X</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class=" text-2xl">Youtube</h4>
+                <h4 class=" text-2xl">Youtube</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class=" text-2xl">Facebook</h4>
+                <h4 class=" text-2xl">Facebook</h4>
+              </div>
+              <div class="foottext-wrap text-effect w-fit h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class=" text-2xl">Instagram</h4>
+                <h4 class=" text-2xl">Instagram</h4>
+              </div>
             </div>
-            <div class="second-child">
-              <h5>About Us</h5>
+            <div class="second-child w-full">
+              <div class="foottext-wrap text-effect text-right w-full h-[2.5vw] overflow-hidden cursor-pointer">
+                <h4 class="text-2xl">Follow Us</h4>
+                <h4 class="text-2xl">Follow Us</h4>
+              </div>
+            
             </div>
           </div>
           <div class="lower-footer w-full ">
-            <div class="line">
+            <div class="line h-[20vh] w-full">
               <svg width="100%" height="100%" viewBox="0 0 100 100">
                 <path d="M -400,50 Q 0,50 500,50" fill="none" stroke="#fff" stroke-width="2" />
               </svg>
             </div>
           </div>
-          <div class="end text-7xl tracking-widest opacity-50 p-2">
-            <h1>Nothing</h1>
+          <div class="end w-full h-[10rem] flex justify-center items-center ">
+            <h1 class="text-[15vw] font-semibold">NOTHING</h1>
           </div>
         </div>
       </footer>
     </div>
   </div>
   <!-- <script src="https://cdn.jsdelivr.net/npm/scrollfeather/featherScroll.js"></script> -->
+  <!-- <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script> -->
   <script type="module" src="/src/script.js"></script>
   <script type="module" src="/src/three.js"></script>
 

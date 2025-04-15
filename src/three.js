@@ -5,12 +5,12 @@ import { gsap } from 'gsap';
 
 const scene=new THREE.Scene();
 const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,100);
-camera.position.z=12;
+camera.position.z=17;
 // camera.position.y=-6;
 // camera.position.x=-3
 
 // camera.rotation.x=THREE.MathUtils.degToRad(90);
-camera.rotation.z-=THREE.MathUtils.degToRad(90);
+// camera.rotation.z-=THREE.MathUtils.degToRad(90);
 
 
 const renderer=new THREE.WebGLRenderer({
@@ -30,7 +30,7 @@ const pmremGenerator=new THREE.PMREMGenerator(renderer);
 pmremGenerator.compileEquirectangularShader();
 
 const loader=new GLTFLoader();
-// const controls=new OrbitControls(camera,renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);
 var model;
 new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_03_1k.hdr',function(texture){
     const envMap=pmremGenerator.fromEquirectangular(texture).texture;
@@ -51,8 +51,8 @@ new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/stud
         // gltf.scene.position.x=-2
         gltf.scene.position.y += ( gltf.scene.position.y - center.y );
         // gltf.scene.position.z += ( gltf.scene.position.z - center.z );
-        // model.rotation.x=THREE.MathUtils.degToRad(30);
-        model.rotation.y+=THREE.MathUtils.degToRad(90);
+        // model.rotation.x=THREE.MathUtils.degToRad(50);
+        // model.rotation.y+=THREE.MathUtils.degToRad(90);
         // model.rotation.z-=THREE.MathUtils.degToRad(0);
         
     },undefined,(error)=>{
@@ -68,26 +68,26 @@ window.addEventListener("resize",function(){
     renderer.setSize(window.innerWidth,window.innerHeight);
 })
 
-window.addEventListener("mousemove",function(e){
-    if(model){
-        const rotationX=(e.clientX/window.innerWidth-.5)*(Math.PI*.3);
-        const rotationY=(e.clientY/window.innerHeight-.5)*(Math.PI*.3);
-        // model.rotation.y+=THREE.MathUtils.degToRad(90);
+// window.addEventListener("mousemove",function(e){
+//     if(model){
+//         const rotationX=(e.clientX/window.innerWidth-.5)*(Math.PI*.3);
+//         const rotationY=(e.clientY/window.innerHeight-.5)*(Math.PI*.3);
+//         // model.rotation.y+=THREE.MathUtils.degToRad(90);
 
-        gsap.to(model.rotation,{
-            x:rotationX,
-            y:-rotationY,
-            duration:.5,
-            ease:"power2.out",
-        })
-        // model.rotation.y=-rotationY;
-        // model.rotation.x=rotationX;
-    }
-})
+//         gsap.to(model.rotation,{
+//             x:rotationY,
+//             y:rotationX,
+//             duration:.5,
+//             ease:"power2.out",
+//         })
+//         // model.rotation.y=-rotationY;
+//         // model.rotation.x=rotationX;
+//     }
+// })
 
 function animate(){
     window.requestAnimationFrame(animate);
     renderer.render(scene,camera);
-    // controls.update();
+    controls.update();
 }
 animate();

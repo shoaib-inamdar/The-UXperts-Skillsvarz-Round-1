@@ -20,8 +20,10 @@
     "gsap": "^3.12.7",
     "lenis": "^1.2.3",
     "locomotive-scroll": "^5.0.0-beta.21",
+    "remixicon": "^4.6.0",
     "scrollfeather": "^1.2.5",
     "scrolltrigger": "^1.0.1",
+    "sheryjs": "^1.0.0-beta.0.1.8",
     "three": "^0.174.0"
   },
   "main": "index.js",

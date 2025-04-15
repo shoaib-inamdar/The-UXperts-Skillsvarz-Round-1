@@ -6,7 +6,9 @@ import { root } from "postcss";
 import { DoubleSide } from "three";
 import { FullScreenQuad, RectAreaLightUniformsLib } from "three/examples/jsm/Addons.js";
 import { deepCloneAttribute } from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import { element, triplanarTexture } from "three/tsl";
+import { element, gapSize, triplanarTexture } from "three/tsl";
+// import Shery from "sheryjs";
+import 'remixicon/fonts/remixicon.css'
 // import FeatherScroll from "scrollfeather"
 
 import LocomotiveScroll from 'locomotive-scroll';
@@ -36,6 +38,13 @@ function lenis(){
   requestAnimationFrame(raf);
   }
   
+
+  // Shery.imageEffect(".contentimg", {
+  //   style: 5,
+  //   gooey: true,
+  //   // debug:true,
+  //   config:{"a":{"value":2,"range":[0,30]},"b":{"value":0.75,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7241529912187108},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.23,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.5,"range":[0,10]},"metaball":{"value":0.33,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.01,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}}
+  // });
 // lenis()
 // const scroll = new FeatherScroll();
 function loader(){
@@ -62,6 +71,7 @@ function cursor(){
 }
 cursor()
 var cursors=document.querySelector(".cursor")
+var cursorh1=document.querySelector(".cursor h1")
 document.querySelectorAll(".cursoreffect").forEach(function(e){
     e.addEventListener("mouseenter",function(elem){
         const data=`${e.getAttribute("data-text")}`
@@ -88,6 +98,17 @@ document.querySelectorAll(".cursoreffect").forEach(function(e){
     })
 })
 
+gsap.from(".videodiv",{
+  scale:.7,
+  scrollTrigger:{
+    trigger:".videodiv",
+    scroller:"body",
+    start:"top 80%",
+    end:"bottom bottom",
+    scrub:2,
+    // markers:true
+  }
+})
 
 //   var maintl=gsap.timeline();
   const cluttertext = (element) => {
@@ -368,19 +389,19 @@ allImgs.forEach((img, index) => {
 }
 products()
 
-
+//  `/public/images/${i.toString().padStart(4, "0")}.webp`
 function frames(){
   const canvas = document.querySelector("#frame");
   const context = canvas.getContext("2d");
   const frames = {
           currentindex: 0,
-          maxindex: 1200
+          maxindex: 468
       }
       var images = [];
       var imageloaded = 0;
       function preloader() {
           for (var i = 1;i <= frames.maxindex;i++) {
-              const imageurl = `./frames/frame_${i.toString().padStart(4, "0")}.jpeg`
+              const imageurl =`public/images/${i}.webp`
               const img = new Image();
               img.src = imageurl
               img.onload = () => {
@@ -424,7 +445,7 @@ function frames(){
                 scrollTrigger: {
                     trigger: ".features",
                     start: "top top",
-                    end: "100% top",
+                    end: "700% top",
                     scrub: 2,
                     pin:true,
                     // markers:true,
@@ -439,9 +460,7 @@ function frames(){
                     }
                 }
             }
-            tl
-            
-            .to(frames,updateframe(1201),"16th")
+            tl.to(frames,updateframe(467))
         }
         preloader();
         window.addEventListener("resize",function(){
@@ -501,3 +520,83 @@ function ewaste(){
   })
 }
 // ewaste()
+
+const textEffect = () => {
+  // Splitting the text content into individual letters and wrapping each in a span with a class
+  document.querySelectorAll(".text-effect").forEach(function (e) {
+    [...e.children].forEach(function (h) {
+      var clutter = "";
+      h.textContent.split("").forEach(function (l) {
+        clutter += `<span>${l}</span>`;
+      });
+      h.innerHTML = clutter;
+    });
+  });
+  //animation for mousemove
+  document.querySelectorAll(".text-effect").forEach(function (e) {
+    e.addEventListener("mouseenter", function () {
+      gsap.to(e.children[0].querySelectorAll("span"), {
+        y: "-106%",
+        stagger: {
+          amount: 0.2,
+        },
+        duration: 0.4,
+      });
+      gsap.to(e.children[1].querySelectorAll("span"), {
+        y: "-100%",
+        stagger: {
+          amount: 0.2,
+        },
+        duration: 0.4,
+      });
+    });
+  });
+  //animation for mouseleave
+  document.querySelectorAll(".text-effect").forEach(function (e) {
+    e.addEventListener("mouseleave", function () {
+      gsap.to(e.children[0].querySelectorAll("span"), {
+        y: "0%",
+        stagger: {
+          amount: 0.2,
+        },
+      });
+      gsap.to(e.children[1].querySelectorAll("span"), {
+        y: "0%",
+        stagger: {
+          amount: 0.2,
+        },
+      });
+    });
+  });
+};
+textEffect();
+
+document.querySelector(".right").addEventListener("click",function(){
+  var navtl=gsap.timeline()
+  gsap.to(".sidenav",{
+      right:0,
+      duration:1,
+      ease:"power4",
+  })
+  navtl.from(".sidenav h1",{
+      x:100,
+      opacity:0,
+      duration:1,
+      ease:"power4",
+      stagger:.3,
+  })
+  gsap.to("#phone,.right",{
+    opacity:0
+  })
+})
+
+document.querySelector(".cross").addEventListener("click",function(){
+  gsap.to(".sidenav",{
+    right:"-40%",
+    duration:1,
+    ease:"power4",  
+  })
+  gsap.to("#phone,.right",{
+    opacity:1
+  })
+})

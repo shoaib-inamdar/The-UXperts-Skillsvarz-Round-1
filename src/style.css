@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: "orbitron";
   src: url(/public/fonts/Orbitron-VariableFont_wght.ttf);
@@ -20,6 +21,9 @@
 .products-wrapper h1,h1{
   font-family: orbitron;
 }
+.left h1{
+  font-family: ndot;
+}
 img{
   width: 100%;
   height: 100%;
@@ -35,6 +39,9 @@ img{
   opacity: 0;
   /* font-family: ndot; */
   /* transition: .8 all ease-in-out; */
+}
+.herotext h1{
+  font-family: orbitron;
 }
 .slideelem {
   /* background: rgba(225, 225, 224, .1); */
@@ -60,6 +67,10 @@ img{
   filter: grayscale(1);
 }
 
+.foottext-wrap span {
+  display: inline-block;
+}
+
   @keyframes animate {
     0%,
     100% {
@@ -69,3 +80,9 @@ img{
       transform: translate(0 ,-10px);
     }
   }
+
+@media(max-width:426px) {
+  .mobilefoot{
+    display: flex;
+  }
+}
