@@ -39,11 +39,20 @@ Welcome to the Nothing Product Showcase Website, a sleek, immersive, and ultra-m
 
 ### 1. Clone the repo
 
-```bash
-git clone https://github.com/yourusername/nothing-product-showcase.git
-cd nothing-product-showcase
+## Installation
 
-installation depences 
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/shoaib-inamdar/The-UXperts-Skillsvarz-Round-1.git
+    cd The-UXperts-Skillsvarz-Round-1
+   ```
 
-npm install
-npm run dev
+2. **Install dependencies**:
+    ```sh
+    npm install
+    ```
+
+3. **Run the app**:
+    ```sh
+    npm run dev
+    ```
