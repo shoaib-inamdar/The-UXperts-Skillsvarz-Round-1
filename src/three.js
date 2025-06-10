@@ -1,16 +1,33 @@
 import * as THREE from 'three';
-import { GLTFLoader, OrbitControls, RGBELoader } from 'three/examples/jsm/Addons.js';
+import { GLTFLoader, RGBELoader } from 'three/examples/jsm/Addons.js';
 import { gsap } from 'gsap';
 // import { mod } from 'three/tsl';
 
 const scene=new THREE.Scene();
-const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,100);
-camera.position.z=17;
+// const camera=new THREE.PerspectiveCamera(35,window.innerWidth/window.innerHeight,.1,100);
+const camera=new THREE.PerspectiveCamera(35,window.innerWidth/window.innerHeight,.1,100);
+gsap.to(camera.position,{
+    z:17,
+    delay:4,
+    ease:"power2.inOut"
+})
+// gsap.to(camera.rotation,{
+//   rotateX:200,
+//   delay:4,
+// },'a')
+// camera.position.z=17;
 // camera.position.y=-6;
 // camera.position.x=-3
+var x=window.matchMedia("(min-width:600px)")
+
 
 // camera.rotation.x=THREE.MathUtils.degToRad(90);
 // camera.rotation.z-=THREE.MathUtils.degToRad(90);
+if(!x.matches){
+gsap.to(camera.position,{
+    z:20,
+    delay:4
+})}
 
 
 const renderer=new THREE.WebGLRenderer({
@@ -30,7 +47,7 @@ const pmremGenerator=new THREE.PMREMGenerator(renderer);
 pmremGenerator.compileEquirectangularShader();
 
 const loader=new GLTFLoader();
-const controls=new OrbitControls(camera,renderer.domElement);
+// const controls=new OrbitControls(camera,renderer.domElement);
 var model;
 new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_03_1k.hdr',function(texture){
     const envMap=pmremGenerator.fromEquirectangular(texture).texture;
@@ -40,7 +57,7 @@ new RGBELoader().load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/stud
     pmremGenerator.dispose();
 
 
-    loader.load("/models/test.glb",(gltf)=>{
+    loader.load("/models/pro.glb",(gltf)=>{
         model=gltf.scene;
         scene.add(model);
         // console.log(model)
@@ -68,6 +85,50 @@ window.addEventListener("resize",function(){
     renderer.setSize(window.innerWidth,window.innerHeight);
 })
 
+
+let idleTween = null;
+let idleTimer = null;
+const IDLE_DELAY = 2000;
+
+window.addEventListener("mousemove", (e) => {
+  if (!model) return;
+
+  const rotY = (e.clientX / window.innerWidth  - 0.5) * (Math.PI * 0.3);
+  const rotX = (e.clientY / window.innerHeight - 0.5) * (Math.PI * 0.3);
+
+  if (idleTween) {
+    idleTween.kill();
+    idleTween = null;
+  }
+
+  gsap.to(model.rotation,{
+    x: rotX,
+    y: rotY,
+    duration: .2,
+    ease: "power2.out"
+  });
+
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    idleTween = gsap.to(model.rotation, {
+      y: "+=" + Math.PI * 2,
+      duration: 20,
+      ease: "none",
+      repeat: -1
+    });
+  }, IDLE_DELAY);
+});
+
+idleTimer = setTimeout(() => {
+  idleTween = gsap.to(model.rotation, {
+    y: "+=" + Math.PI * 2,
+    duration: 20,
+    ease: "none",
+    repeat: -1
+  });
+}, IDLE_DELAY);
+
+
 // window.addEventListener("mousemove",function(e){
 //     if(model){
 //         const rotationX=(e.clientX/window.innerWidth-.5)*(Math.PI*.3);
@@ -88,6 +149,6 @@ window.addEventListener("resize",function(){
 function animate(){
     window.requestAnimationFrame(animate);
     renderer.render(scene,camera);
-    controls.update();
+    // controls.update();
 }
 animate();

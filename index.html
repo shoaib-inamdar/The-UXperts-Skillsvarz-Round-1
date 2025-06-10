@@ -166,21 +166,21 @@
       <canvas id="frame" class="w-full h-screen"></canvas>
     </div>
     <div class="ewaste w-full">
-      <div class="ewaste-wrapper w-full  flex flex-col relative text-white gap-10">
+      <div class="ewaste-wrapper w-full  flex flex-col relative text-white gap-10 px-3">
         <div class="slide1 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
-          <h1 class="slide1h1 text-center text-5xl font-semibold cursoreffect"><span class="text-green-500">Sustainable</span> Design</h1>
+          <h1 class="slide1h1 text-center text-5xl font-semibold cursoreffect border-b-2 pb-3"><span class="text-green-500">Sustainable</span> Design</h1>
           <div class="slideelem absolute lg:top-[15vw] lg:left-[7vw] top-[20vh] left-0 z-[2] p-10 mix-blend-difference   flex flex-col gap-5 justify-center ">
-            <h1 class="tracking-wider text-2xl ">Over 50% sustainable plastic parts</h1>
-            <h1 class="tracking-wider text-2xl ">100% recycled aluminium for mid-frame and buttons</h1>
+            <h1 class="tracking-wider text-2xl ">Over <span class="text-green-500 text-4xl font-semibold">50%</span> sustainable plastic parts</h1>
+            <h1 class="tracking-wider text-2xl "><span class="text-green-500 text-4xl font-semibold">100%</span> recycled aluminium for mid-frame and buttons</h1>
           </div>
           <div class="slideelem absolute lg:bottom-[10vw] lg:right-[7vw] top-[50vh] z-[2] p-10 mix-blend-difference flex flex-col gap-5 justify-center ">
-            <h1 class="tracking-wider text-2xl ">Over 85% recycled steel in 21 stamping parts</h1>
-            <h1 class="tracking-wider text-2xl ">6 circuit boards crafted with 100% recycled tin</h1>
+            <h1 class="tracking-wider text-2xl ">Over <span class="text-green-500 text-4xl font-semibold">85%</span> recycled steel in 21 stamping parts</h1>
+            <h1 class="tracking-wider text-2xl "><span class="text-blue-500 text-4xl">6</span> circuit boards crafted with <span class="text-green-500 text-4xl font-semibold">100%</span> recycled tin</h1>
           </div>
-          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect absolute top-[7vw] right-[10vw] w-[17rem] h-[17rem] overflow-hidden ">
+          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect absolute top-[7vw] right-[10vw] w-[17rem] h-[17rem] overflow-hidden lg:opacity-1 opacity-0">
             <img src="/public/assets/recycle1.webp" alt="">
           </div>
-          <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect absolute -bottom-[2vw] left-1/2 -translate-x-1/2 w-[13rem] h-[13rem] overflow-hidden lg:opacity-100 opacity-0">
+          <div data-scroll data-scroll-speed=".3" class="slideimg cursoreffect absolute -bottom-[2vw] left-1/2 -translate-x-1/2 w-[13rem] h-[13rem] overflow-hidden lg:opacity-100 opacity-0">
             <img src="/public/svg/recycled-bag.svg" alt="">
           </div>
           <div data-scroll data-scroll-speed=".2"
@@ -189,8 +189,8 @@
           </div>
 
         </div>
-        <div class="slide2 w-full h-screen pt-20 flex flex-col gap-5 relative items-center">
-          <h1 class="cursoreffect text-center text-5xl font-semibold"><span class="text-green-500">Environmental</span> Impact</h1>
+        <div class="slide2 w-full h-screen pt-20 flex flex-col gap-5 relative items-center px-3">
+          <h1 class="cursoreffect text-center text-5xl font-semibold border-b-2 pb-3"><span class="text-green-500">Environmental</span> Impact</h1>
           <div
             class="slideelem absolute z-[2] mix-blend-difference top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5  flex flex-col justify-center gap-5">
             <h1 class="text-4xl tracking-wider text-center">Carbon Footprint:</h1>
@@ -200,16 +200,19 @@
           <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect lg:absolute top-[20vh] left-[5rem] w-[13rem] h-2/3 opacity-0 lg:opacity-100">
             <img src="/public/assets/Vertical Hydroponic Garden.jpeg" alt="">
           </div>
+          <div data-scroll data-scroll-speed=".3" class="slideimg cursoreffect absolute -bottom-[2vw] left-1/2 -translate-x-1/2 w-[15rem] h-[13rem] overflow-hidden lg:opacity-100 opacity-0">
+            <img src="/public/assets/carbonfoot.jpg" alt="">
+          </div>
           <div data-scroll data-scroll-speed=".2" class="slideimg cursoreffect lg:absolute top-0 right-[5rem] w-[17rem] h-[17rem]">
             <img src="/public/assets/Vertical Hydroponic Garden.jpeg" alt="">
           </div>
           <div data-scroll data-scroll-speed=".2"
-            class="slideimg cursoreffect lg:absolute bottom-0 right-[5rem] w-[17rem] h-[17rem]">
+            class="slideimg cursoreffect lg:absolute bottom-0 right-[5rem] w-[17rem] h-[17rem] lg:opacity-1 opacity-0">
             <video autoplay loop muted class="w-full h-full object-cover" src="/public/videos/carbon.mp4"></video>
           </div>
         </div>
-        <div class="slide3 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative">
-          <h1 class="cursoreffect text-center text-5xl font-semibold"><span class="text-green-500">Green</span> Packaging</h1>
+        <div class="slide3 w-full h-screen  pt-20 flex items-center flex-col gap-5 relative px-3">
+          <h1 class="cursoreffect text-center text-5xl font-semibold border-b-2 pb-3"><span class="text-green-500">Green</span> Packaging</h1>
           <div
             class="slideelem absolute z-[2] mix-blend-difference top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4">
             <h1 class="text-4xl tracking-wider text-center">Plastic-free packaging,</h1>
@@ -227,6 +230,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="team w-full h-screen">
+
     </div>
     <div class="footer w-full text-white p-10 overflow-hidden">
       <footer class="p-[1rem] w-full">
