@@ -12,9 +12,20 @@
 
 <body>
   <div class="main w-full bg-black  relative overflow-x-hidden">
-    <div class="loader w-full h-screen fixed top-0 left-0 z-[5]">
-      <video loop muted autoplay class="w-full h-full object-cover" src="/public/videos/Loader.mp4"></video>
+     <div class="loader font-[Urbanist] flex flex-col justify-center items-center w-full h-screen fixed top-0 left-0 z-[9] bg-black">
+      <!-- <div class="loader-logo w-52 h-52"><img class="w-full h-full object-cover" src="./logo.jpg" alt=""></div> -->
+      <h1 class="text-9xl font-[ndot] text-white">NOTHING (R) </h1>
+      <div class="logotext mt-5 text-center h-[1.5rem] overflow-hidden animate-pulse">
+        <h1 class="relative font-semibold text-white font-[orbitron] tracking-wide ">Loading Vibes, Setting Trends...</h1>
+      </div>
+      <div class="progressbar mt-4 w-60 h-1 bg-zinc-600 overflow-hidden rounded-full">
+        <div class="progress bg-zinc-100 w-0 h-1"></div>
+      </div>
     </div>
+    <!-- <div class="loader w-full h-screen fixed top-0 left-0 z-[5]">
+
+      <video loop muted autoplay class="w-full h-full object-cover" src="/public/videos/Loader.mp4"></video>
+    </div> -->
     <div class="cursor lg:flex hidden w-4 h-4 pointer-events-none fixed z-[6] rounded-full bg-white -translate-x-1/2 -translate-y-1/2 opacity-0 mix-blend-difference ">
     </div>
 
@@ -91,7 +102,7 @@
         <div class="overlay w-full h-full" id="overlay1">
           <h1 class="product1 lg:text-[5rem] text-[3rem] ">Ear Open</h1>
         </div>
-        <img src="https://in.nothing.tech/cdn/shop/files/Intuitive-storage---Desktop_1494x.jpg?v=1726921914" alt="">
+        <img src="/public/assets/ear opne.jpg" alt="">
       </div>
       <div
         class="product-imgs cursoreffect absolute top-[110%] -left-[20%] lg:h-[90vh] h-[60vh] lg:w-[70vw] w-[75vw] opacity-100 overflow-hidden imgs-left"

@@ -47,12 +47,24 @@ function lenis(){
   // });
 // lenis()
 // const scroll = new FeatherScroll();
+var tl2=gsap.timeline();
+
 function loader(){
-  gsap.to(".loader",{
+  var progress=document.querySelector(".progress")
+tl2.to(progress,{
+    width:"100%",
+    // ease:"power2.out",
+    ease: "power1.inOut",
+    duration:8
+})
+tl2.to(".loader",{
     opacity:0,
-    display:"none",
-    delay:4
-  })
+    // ease:"power2.out",
+    // duration:5
+})
+tl2.to(".loader",{
+    display:"none"
+})
 }
 loader()
 function cursor(){

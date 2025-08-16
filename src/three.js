@@ -8,8 +8,8 @@ const scene=new THREE.Scene();
 const camera=new THREE.PerspectiveCamera(35,window.innerWidth/window.innerHeight,.1,100);
 gsap.to(camera.position,{
     z:17,
-    delay:4,
-    ease:"power2.inOut"
+    delay:8,
+    ease:"circ.out"
 })
 // gsap.to(camera.rotation,{
 //   rotateX:200,
@@ -26,7 +26,7 @@ var x=window.matchMedia("(min-width:600px)")
 if(!x.matches){
 gsap.to(camera.position,{
     z:20,
-    delay:4
+    delay:8
 })}
 
 
