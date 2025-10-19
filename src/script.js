@@ -413,7 +413,7 @@ function frames(){
       var imageloaded = 0;
       function preloader() {
           for (var i = 1;i <= frames.maxindex;i++) {
-              const imageurl =`public/images/${i}.webp`
+              const imageurl =`/images/${i}.webp`
               const img = new Image();
               img.src = imageurl
               img.onload = () => {
